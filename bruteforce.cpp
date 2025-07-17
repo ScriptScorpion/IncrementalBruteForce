@@ -34,6 +34,14 @@ void bruteForce(int leng, const std::string& charset) {
 int main() {
     int maxLen;
     int option;
+    std::string logo = 
+        "  ▗▄▄▖▗▄▄▄▖▗▖  ▗▖▗▄▄▖ ▗▖   ▗▄▄▄▖    ▗▄▄▖ ▗▄▄▖ ▗▖ ▗▖▗▄▄▄▖▗▄▄▄▖▗▄▄▄▖ ▗▄▖ ▗▄▄▖  ▗▄▄▖▗▄▄▄▖\n"
+        " ▐▌     █  ▐▛▚▞▜▌▐▌ ▐▌▐▌   ▐▌       ▐▌ ▐▌▐▌ ▐▌▐▌ ▐▌  █  ▐▌   ▐▌   ▐▌ ▐▌▐▌ ▐▌▐▌   ▐▌\n"
+        "  ▝▀▚▖  █  ▐▌  ▐▌▐▛▀▘ ▐▌   ▐▛▀▀▘    ▐▛▀▚▖▐▛▀▚▖▐▌ ▐▌  █  ▐▛▀▀▘▐▛▀▀▘▐▌ ▐▌▐▛▀▚▖▐▌   ▐▛▀▀▘\n"
+        " ▗▄▄▞▘▗▄█▄▖▐▌  ▐▌▐▌   ▐▙▄▄▖▐▙▄▄▖    ▐▙▄▞▘▐▌ ▐▌▝▚▄▞▘  █  ▐▙▄▄▖▐▌   ▝▚▄▞▘▐▌ ▐▌▝▚▄▄▖▐▙▄▄▖\n"
+        "                                                                                     ";
+                                                                                               
+    std::cout << logo << std::endl;
     std::cout << "Enter method to crack password: \n";
     std::cout << "1. Only numbers \n";
     std::cout << "2. Only letters \n";
