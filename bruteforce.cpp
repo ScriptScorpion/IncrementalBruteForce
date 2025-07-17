@@ -5,8 +5,8 @@
 #include <thread>
 
 void bruteForce(int leng, const std::string& charset) {
-    std::vector<int> indices(leng, 0); 
-    std::string current(leng, charset[0]); // current password
+    std::vector<int> indices(leng, 0);  // counts like counter
+    std::string current(leng, charset[0]);
 
     while (true) {
         std::cout << current << std::endl;
@@ -37,7 +37,8 @@ int main() {
     std::cout << "Enter method to crack password: \n";
     std::cout << "1. Only numbers \n";
     std::cout << "2. Only letters \n";
-    std::cout << "3. Leeters and numbers \n";
+    std::cout << "3. Letters and numbers \n";
+    std::cout << "4. Ultimate cracker: Numbers, lowercase and uppercase letters \n";
     std::cout << "Choise(number): ";
     std::cin >> option;
     if (!std::cin) {
@@ -61,6 +62,11 @@ int main() {
         case 3:
             for (int len3 = 1; len3 <= maxLen; len3++) {
                 bruteForce(len3, "abcdefghijklmnopqrstuvwxyz0123456789");
+            }
+            break;
+        case 4:
+            for (int len4 = 1; len4 <= maxLen; len4++) {
+                bruteForce(len4, "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789");
             }
             break;
         default:
