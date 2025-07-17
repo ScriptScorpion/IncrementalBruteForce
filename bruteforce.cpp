@@ -10,7 +10,7 @@ void bruteForce(int leng, const std::string& charset) {
 
     while (true) {
         std::cout << current << std::endl;
-        std::this_thread::sleep_for(std::chrono::milliseconds(25));
+        std::this_thread::sleep_for(std::chrono::milliseconds(25)); // can change this value if you want faster or slower output
         int pos = leng - 1; // index to start
         while (pos >= 0) {
             indices[pos]++;
