@@ -5,7 +5,7 @@
 #include <thread>
 
 void bruteForce(int leng, const std::string& charset) {
-    std::vector<int> indices(leng, 0);  // counting each string to not get error
+    std::vector<int> indices(leng, 0); 
     std::string current(leng, charset[0]); // current password
 
     while (true) {
