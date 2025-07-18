@@ -60,7 +60,7 @@ int main() {
     }
     answer = std::toupper(answer);
     if (answer == 'Y') {
-        std::cout << "Enter directory name you want to save output to: ";
+        std::cout << "Enter directory name you want to save output: ";
         std::cin >> savedir;
         if (!std::cin) {
             return 1;
