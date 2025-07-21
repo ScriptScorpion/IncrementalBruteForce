@@ -5,6 +5,7 @@
 #include <thread>
 #include <cstdlib>
 #include <fstream>
+#include <filesystem>
 
 void bruteForce(int leng, const std::string& charset, const char answer, std::ofstream &out, const std::string &savedir = "") {
     std::vector<int> indices(leng, 0);  // counts like counter
@@ -62,10 +63,11 @@ int main() {
     if (answer == 'Y') {
         std::cout << "Enter the name of the directory that you want to save output in: ";
         std::cin >> savedir;
-        if (!std::cin) {
+        if (!std::cin || !std::filesystem::exists(savedir)) {
             return 1;
             std::exit(1);
         }
+	std::filesystem::current_path(savedir);
         out.open("passwords.txt");
         if (!out.is_open()) {
             std::cout << "Failed to open file" << std::endl;
