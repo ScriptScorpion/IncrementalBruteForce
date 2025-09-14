@@ -67,7 +67,7 @@ int main() {
             return 1;
             std::exit(1);
         }
-	std::filesystem::current_path(savedir);
+		std::filesystem::current_path(savedir);
         out.open("passwords.txt");
         if (!out.is_open()) {
             std::cout << "Failed to open file" << std::endl;
